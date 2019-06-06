@@ -1,0 +1,399 @@
+<html>
+<head>
+<title>
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<style>
+a{
+  color: black;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+  background: red;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+button {
+  background-color:blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  font-size: 20px;
+}
+.box-sizing{
+  border-box;
+}
+.img-container {
+  float:Left
+}
+
+.topnav {
+overflow: hidden;
+background-color:light;
+}
+.topnav a {
+  float: left;
+  color:#000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+  .filterDiv{
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+  p{
+    font-size: 21px;
+    background-color:;
+  }
+  .h1{
+    text-align: center;
+  }
+</style>
+
+  <script src="https://connect.soundcloud.com/sdk.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+
+
+  <video autoplay muted loop id="myVideo">
+  <source src="nap.mp4" type="video/mp4">
+    </video>
+<div>
+
+    <div class="row" style="height:2000px; background-color: #cccccc;">
+    <div class="col-sm-10" style="height:2900px; background-color:#8080ff; margin-left: 110px; margin-top: 30px;">
+      <div class="row" style="border-style:groove; border-color:#f2f2f2">
+        <div class="col-sm-3">
+      </div>
+      <h1 class=""style="font-size:80px;color:#cc0099;">MUSIC WORLD<h>
+    </div>
+    <div class="row">
+  <div class="container mt-3">
+    <div class="autosize" style="text-align:center">
+
+      <a href="#" onclick="filterSelection('0-9')">0-9</a>
+        <a href="#" onclick="filterSelection('A')">A</a>
+        <a href="#" onclick="filterSelection('B')">B</a>
+        <a href="#" onclick="filterSelection('C')">C</a>
+        <a href="#" onclick="filterSelection('D')">D</a>
+        <a href="#" onclick="filterSelection('E')">E</a>
+        <a href="#" onclick="filterSelection('F')">F</a>
+        <a href="#" onclick="filterSelection('G')">G</a>
+        <a href="#" onclick="filterSelection('H')">H</a>
+        <a href="#" onclick="filterSelection('I')">I</a>
+        <a href="#" onclick="filterSelection('J')">J</a>
+        <a href="#" onclick="filterSelection('K')">K</a>
+        <a href="#" onclick="filterSelection('L')">L</a>
+        <a href="#" onclick="filterSelection('M')">M</a>
+        <a href="#" onclick="filterSelection('N')">N</a>
+        <a href="#" onclick="filterSelection('O')">O</a>
+        <a href="#" onclick="filterSelection('P')">P</a>
+        <a href="#" onclick="filterSelection('Q')">Q</a>
+        <a href="#" onclick="filterSelection('R')">R</a>
+        <a href="#" onclick="filterSelection('S')">S</a>
+        <a href="#" onclick="filterSelection('T')">T</a>
+        <a href="#" onclick="filterSelection('U')">U</a>
+        <a href="#" onclick="filterSelection('V')">V</a>
+        <a href="#" onclick="filterSelection('W')">W</a>
+        <a href="#" onclick="filterSelection('X')">X</a>
+        <a href="#" onclick="filterSelection('Y')">Y</a>
+        <a href="#" onclick="filterSelection('Z')">Z</a>
+      </div>
+      <div class="d-flex flex-wrap bg-light">
+        <div style="background-color:#9966ff;" class="p-2 border rounded-sm"onclick="filterSelection('MA')" > MARY-2 </div>
+        <div style="background-color:#9966ff;" class="p-2 border rounded-sm"onclick="filterSelection('KA')"> KANAA </div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('TH')"> THERI </div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('NA')"> NAANUM ROWDY THAAN </div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('NN')"> NANTHA </div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('BO')"> BOMBAY</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('VE')"> VELAIYILLA PADDATHAARY</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('VI')"> VISWASAM</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('JI')"> JILLA</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('KL')"> KKAALII</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('TO')"> THODARY</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('KO')"> KODY</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('SE')"> SEEMA RAAJA</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('NM')"> NIMIR</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('KS')"> KADAIKKUDDI</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('BA')"> BAAHUBALI-2</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('KL')"> VISWASAM</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('KL')"> VISWASAM</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('KL')"> KAALI</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('KL')"> KAALI</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('KL')"> KAALI</div>
+        <div style="background-color:#9966ff;"class="p-2 border rounded-sm"onclick="filterSelection('KL')"> KKAALI</div>
+      </div>
+    </div>
+    </div>
+      <br>
+
+    <div class="row" style="margin-top:10px;">
+    <div class="col-sm-2 filterDiv M MA">
+        <div class="img-container">
+    <img src="maari-2.jpg" class="rounded" alt="" width="330px"
+    height="500px">
+    <button  style="text-align:center"type="submit" id="sta1"onclick="myFunction()">start</button>
+    <button style="text-align:center"type="submit" id="sto1"onclick="myFunction()">stop</button>
+    <P><b>MARY-2</b><br>
+    Rowdy Baby</p>
+    </a>
+  </div>
+  </div>
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv K KA">
+<div class="img-container">
+<img src="kanaa.jpg" class="rounded" alt="" width="330px" height="500px">
+  <button type="submit" text-align="center" id="sta2"onclick="myFunction()">start</button>
+  <button type="submit" text-align="center"  id="sto2"onclick="myFunction()">stop</button>
+  <p><b>KANAA</b><br>
+    Oththaiyadi Paathaiyila</p>
+</div>
+</div>
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv T TH">
+<div class="img-container">
+<img src="theri.jpg" class="rounded" alt="" width="330px" height="500px">
+<button type="submit" id="sta3"onclick="myFunction()">start</button>
+<button type="submit" id="sto3"onclick="myFunction()">stop</button>
+<P><b>THERI</b><br>
+EENA MEENA TEEKA</P>
+</div>
+</div>
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv N NA">
+<div  class="img-container">
+<img src="naanum rowdi.jpeg" class="rounded" alt="" width="330px"
+height="500px">
+<button type="submit" id="sta4"onclick="myFunction()">start</button>
+<button type="submit" id="sto4"onclick="myFunction()">stop</button>
+<P><b>NAANUM ROWDY THAAN</b><br>
+Thankame Unnathaan
+</P>
+</div>
+</div>
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv N NN">
+<div  class="img-container">
+<img src="munpaniya.jpg" class="rounded" alt="" width="330px"
+height="500px">
+<button type="submit" id="sta5"onclick="myFunction()">start</button>
+<button type="submit" id="sto5"onclick="myFunction()">stop</button>
+<P><b>NANTHA</b><br>
+Munpaniya Muthal Malaiya
+</P>
+</div>
+</div>
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv B BO">
+<div  class="img-container">
+<img src="bombay.JPG" class="rounded" alt="" width="330px"
+height="500px">
+<button type="submit" id="sta6"onclick="myFunction()">start</button>
+<button type="submit" id="sto6"onclick="myFunction()">stop</button>
+<P><b>BOMBAY</b><br>
+Kannaalane Enathu Kannai
+</P>
+</div>
+</div>
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv V VE">
+<div  class="img-container">
+<img src="velai.jpg" class="rounded" alt="" width="330px"
+height="500px">
+<button type="submit" id="sta7"onclick="myFunction()">start</button>
+<button type="submit" id="sto7"onclick="myFunction()">stop</button>
+<P><b>VELAIYILLA PADDATHAARY</b><br>
+Amma Amma
+</P>
+</div>
+</div>
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv V VI">
+<div  class="img-container">
+<img src="viswasam.jpg" class="rounded" alt="" width="330px"
+height="500px">
+<button type="submit" id="sta8"onclick="myFunction()">start</button>
+<button type="submit" id="sto8"onclick="myFunction()">stop</button>
+<P><b>VISWASAM</b><br>
+Kannan Kanne
+</P>
+</div>
+</div>
+
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv K KO">
+<div  class="img-container">
+<img src="kodi.jpg" class="rounded" alt="" width="330px"
+height="500px">
+<button type="submit" id="sta9"onclick="myFunction()">start</button>
+<button type="submit" id="sto9"onclick="myFunction()">stop</button>
+<P><b>KODY</b><br>
+Sirukki Vaasam
+</P>
+</div>
+</div>
+
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv J JI">
+<div  class="img-container">
+<img src="jil.jpg" class="rounded" alt="" width="330px"
+height="500px">
+<button type="submit" id="sta10"onclick="myFunction()">start</button>
+<button type="submit" id="sto10"onclick="myFunction()">stop</button>
+<P><b>JILLA</b><br>
+Kandangi Kandangi
+</P>
+</div>
+</div>
+
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv S SE">
+<div  class="img-container">
+<img src="sema.jpg" class="rounded" alt="" width="330px"
+height="500px">
+<button type="submit" id="sta11"onclick="myFunction()">start</button>
+<button type="submit" id="sto11"onclick="myFunction()">stop</button>
+<P><b>SEEMA RAAJA</b><br>
+Onnavitta Yarum Yenakkilla
+</P>
+</div>
+</div>
+
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv T TO">
+<div  class="img-container">
+<img src="tho.jpg" class="rounded" alt="" width="330px"
+height="500px">
+<button type="submit" id="sta12"onclick="myFunction()">start</button>
+<button type="submit" id="sto12"onclick="myFunction()">stop</button>
+<P><b>THODARI</b><br>
+Pona Usuru Vanthurichchu
+</P>
+</div>
+</div>
+
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv N NM">
+<div  class="img-container">
+<img src="nimir.jpeg" class="rounded" alt="" width="330px"
+height="500px">
+<button type="submit" id="sta13"onclick="myFunction()">start</button>
+<button type="submit" id="sto13"onclick="myFunction()">stop</button>
+<P><b>NIMIR</b><br>
+Nejjil Mamazhai
+</P>
+</div>
+</div>
+
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv K KS">
+<div  class="img-container">
+<img src="sin.jpg" class="rounded" alt="" width="330px"
+height="500px">
+<button type="submit" id="sta14"onclick="myFunction()">start</button>
+<button type="submit" id="sto14"onclick="myFunction()">stop</button>
+<P><b>KADAIKKUDDI SINKAM</b><br>
+Sandakkaari Vaady Vaady
+</P>
+</div>
+</div>
+
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv B BA">
+<div  class="img-container">
+<img src="baa.jpg" class="rounded" alt="" width="330px"
+height="500px">
+<button type="submit" id="sta15"onclick="myFunction()">start</button>
+<button type="submit" id="sto15"onclick="myFunction()">stop</button>
+<P><b>BAAHUBALI-2</b><br>
+Orey Oar Ooril
+</P>
+</div>
+</div>
+
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2 filterDiv K KL">
+<div  class="img-container">
+<img src="kali.jpg" class="rounded" alt="" width="330px" id="mnn"
+height="500px">
+<button type="submit" id="sta16"onclick="myFunction()">start</button>
+<button type="submit" id="sta16"onclick="myFunction()">stop</button>
+<P style=""><b>KAALI</b><br>
+Arumbey Ennai Kadathi
+</P>
+</div>
+</div>
+
+
+
+    <script src="script.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src = "js/bootstrap.min.js"></script>
+</body>
+</html>
